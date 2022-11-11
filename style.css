@@ -1,0 +1,307 @@
+/* =============================== Variables ==================================== */
+:root{
+    --head-foot-color: lightgray;
+    --main-color: rgb(123, 159, 161);
+    /* --main-color: rgb(144, 152, 189); */
+    --nav-color: gray;
+}
+/* ================================ General ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* ============================   Header General  ============================== */  
+header{
+    background-color: var(--head-foot-color);
+    height: 3rem;
+}
+
+header h1{
+    color: rgb(72, 118, 121);
+    text-align: center;
+}
+
+
+/* ========================== Cuerpo general con Nav y Main ===================== */
+
+.cuerpo{ 
+    display: flex; 
+    min-height: 40rem;
+}
+
+nav{
+    padding-top: 1rem;
+    width: 20%;
+    background-color: var(--nav-color);
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none; 
+}
+
+.botonNav{
+    margin: .5rem;
+    padding: 1rem; 
+    border-radius: 5px;
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+    min-width: 12rem;
+    text-align: center;
+}
+
+.botonNav:hover{
+    background-color: rgb(79, 117, 119);
+}
+
+
+main{
+    width: 80%;
+    padding: 1rem;
+    background-color: var(--main-color);
+}
+
+.recuadros{
+    border: solid 1px black;
+    min-height: 2rem;
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.tituloJuego{
+    color: var(--head-foot-color);
+    text-align: center;
+}
+
+.espacioJuego{
+    min-height: 30rem;
+}
+
+.textoIndex{
+    font-size: 1.2rem;
+    margin: 1rem 10rem 0 10rem
+}
+
+.botonStart{
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: var(--head-foot-color);
+    min-width: 6rem;
+    height: 2rem;
+    text-align: center;
+}
+
+.botonStart:hover{
+    background-color: var(--nav-color);
+}
+
+/* ============================ Modal Login =========================== */
+.login-button{
+    position: fixed;
+    right: 2rem;
+    top: .5rem;
+    padding: .2rem;
+    border-radius: 5px;
+    min-width: 4rem;
+    height: 1.8rem;
+    background-color: var(--main-color);
+}
+
+.login-button:hover{
+    background-color: rgb(79, 117, 119);
+}
+
+.login-name{
+    position: fixed;
+    right: 7rem;
+    top: .5rem;
+    padding: .2rem;
+    height: 1.8rem;
+}
+
+.modal-login-container{
+    position: fixed;
+    right: 2rem;
+    top: 3rem;
+    border: 1.5px solid black;
+    padding: 1rem;
+    background-color:rgb(109, 109, 109, 0.90);
+    color: white;
+    min-width: 20rem;
+    min-height: 8rem;
+}
+
+.login-on{
+    display: block;
+}
+
+.login-off{
+    display: none;
+}
+
+#login_form{
+    padding-top: 1rem;
+}
+.form-labelOverInput{
+    display: block;
+}
+
+.form-AceptarBtn{
+    text-align: right;
+    margin-top: 2.5rem;
+}
+
+#login_submit{
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+
+/* ============================= Ahorcado ============================= */
+
+
+.ingresos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#letraInput{
+    background-color: var(--nav-color);
+    color: white;
+    margin-left: .5rem;
+    text-align: center;
+}
+
+.espacioPalabra{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.palabra{
+    text-align: center;
+    min-width: 80%;
+}
+
+/* --- Dibujo ahorcado --- */
+#espacioHorca{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+#bloque{
+    display: flex;
+}
+
+#antesCabeza{
+    width: 1.25rem;
+}
+#cabeza{
+    border-radius: 100%;
+    background-color: var(--main-color);
+    width: 2rem;
+    height: 2rem;
+}
+
+
+#brazoIzq{
+    background-color:var(--main-color);
+    width: 2rem;
+    height: .5rem;
+}
+#cuerpo{
+    background-color:var(--main-color);
+    width: .5rem;
+    height: 4rem;
+}
+#brazoDer{
+    background-color:var(--main-color);
+    width: 2rem;
+    height: .5rem;
+}
+
+
+#antesPiernas{
+    width: 1.5rem;
+}
+#piernaIzq{
+    background-color:var(--main-color);
+    width: .5rem;
+    height: 2.5rem;
+}
+#interPiernas{
+    width: .5rem;
+}
+#piernaDer{
+    background-color:var(--main-color);
+    width: .5rem;
+    height: 2.5rem;
+}
+
+
+
+/* ========================= Records ======================= */
+.areaDisplayRecords, .areaBotonesDisplayRecords {
+    text-align: center;
+}
+
+.gridTable{
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: 2px solid black
+}
+
+.gridElements{
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: var(--head-foot-color);
+    border: 1px solid darkgray;
+    border-collapse: collapse;
+}
+.gridTitleElements{
+    color: rgb(72, 118, 121);
+}
+
+.gridDataElements{
+    color: black;
+}
+
+.records-button{
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: var(--head-foot-color);
+    min-width: 6rem;
+    height: 2rem;
+    text-align: center;
+}
+
+.records-button:hover{
+    background-color: var(--nav-color);
+}
+
+#myChart{
+    margin: auto;
+    max-width: 70%;
+    max-height: 15rem;
+}
+
+
+/* =========================== Footer General ========================= */
+footer{
+    background-color: var(--head-foot-color);
+    min-height: 1.5rem;
+    text-align: center;
+}
+
+footer p{
+    font-size: 1 rem;
+    color: rgb(72, 118, 121);
+    /* color: rgb(123, 159, 161); */
+}

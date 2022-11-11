@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Creando JS </title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./scripts/ahorcado/ahorcadoUI.js"></script>   
+    <script src="./scripts/ahorcado/ahorcadoFunc.js"></script> 
+    <script src="./scripts/utilitarios/menu.js"></script>      
+    
+</head>
+
+<body>
+    <header>
+        <h1>Juegos</h1>
+        <h3 class="login-name"></h3>
+        <button class="login-button">Login</button>
+    </header>
+
+    <div class="cuerpo">
+        <nav>
+            <ul>
+                <li><button class="botonNav" type="button" onclick="CargarPagina('./ahorcado.html')" id="btnAhorcado">Ahorcado</button></li>
+            </ul>
+        </nav>
+        <main class="areaTrabajo">
+            <section class="recuadros tituloJuego">
+                <h2 id="texto">Ahorcado</h2>
+            </section>
+            <section class="recuadros espacioJuego">
+                <div class="ingresos">
+                    <div>
+                        <label id="letraLabel">Ingrese una letra:</label>
+                        <input type="text" id="letraInput" value="" maxlength="1" size="1" onchange="LetraRecibida(this.value)">
+                    </div>
+                    <button class="botonStart" type="button" onclick="ResetAhorcado()" id="btnStart">Reiniciar</button>
+                </div>
+                <div class="espacioPalabra">
+                    
+                    <h2 id="palabra" class="palabra"></h2>
+                    
+                </div>
+                <div id="espacioHorca">
+                    <div>
+                        <div id="bloque">
+                            <div id="antesCabeza"></div>
+                            <div id="cabeza"></div>
+                        </div>
+                        <div id="bloque">
+                            <div id="brazoIzq"></div>
+                            <div id="cuerpo"></div>
+                            <div id="brazoDer"></div>
+                        </div>
+                        <div id="bloque">
+                            <div id="antesPiernas"></div>
+                            <div id="piernaIzq"></div>
+                            <div id="interPiernas"></div>
+                            <div id="piernaDer"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="espacioPalabra">
+                    <h2 id="resultado" class="resultado"></h2>
+                </div>
+                <div class="espacioIncluye">
+                    
+                </div>
+            </section>        
+        </main>
+
+        <aside>
+            <section class="modal-login-container login-off" id="login">
+                <h2>Login</h2>
+                <form id="login_form">
+                    <div class="form-labelOverInput">
+                        <label for="usuario">Nombre de Usuario</label>
+                        <input type="text" name="usuario" id="login_usuario"/>
+                    </div>
+                    <div class="form-AceptarBtn">
+                        <input type="submit" value="Aceptar" id="login_submit">
+                    </div>
+                    
+                </form>
+            </section>
+        </aside>
+    </div>
+    
+    <footer>
+        <!-- <p></p> -->
+    </footer>
+
+    <script src="./scripts/utilitarios/login.js"></script>
+    <script>
+        ResetAhorcado() 
+    </script>
+
+</body>
+</html>
